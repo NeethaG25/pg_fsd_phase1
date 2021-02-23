@@ -13,9 +13,11 @@ public class FileInByteDemo {
 				BufferedInputStream bis = new BufferedInputStream(fis);){
 				StringBuilder sb = new StringBuilder();
 				while(bis.available()!=0) {
-					
+					sb.append((char)bis.read());
 				
 				}
+				System.out.println("Data read from file is ");
+				System.out.println(sb.toString());
 			
 		} catch (FileNotFoundException e) {
 			System.out.println(e);
